@@ -1,0 +1,163 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-bold";
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-bold-italic";
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--off-white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background-color: var(--white);
+    border-radius: 10px;
+    border-bottom-right-radius: 100px;
+    padding: 30px 30px;
+    width: 375px;
+
+}
+
+form {
+    display: flex;
+}
+
+label {
+    font-family: "Poppins-bold";
+    color: var(--smokey-grey);
+    font-size: 10px;
+}
+
+
+input {
+    font-family: "Poppins-bold";
+    color: var(--smokey-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 90px;
+    margin-right: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    font-size: 8px;
+    color: var(--light-red);
+    font-style : italic;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.divider > div:nth-child(1) {
+    background-color: var(--light-grey);
+    height: 1px;
+    width: 100%;
+}
+
+.divider > div:nth-child(2) {
+    background-color: var(--purple);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.divider img {
+    height: 20px;
+    width: 20px;
+    
+}
+
+#submit {
+    display: none;
+}
+
+#result {
+    font-family: "Poppins-bold-italic";
+    font-size: 50px;
+    line-height: 55px;
+    word-spacing: 1px;
+}
+
+span {
+    color: var(--purple);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (max-width: 450px) {
+    .divider {
+        flex-direction: column;
+        align-items: center;
+        height: 50px;
+        margin: 30px 0;
+    }
+
+    .divider > div:nth-child(2) {
+        position: absolute;
+        margin-left: 0;
+    }
+
+    #container {
+        width: 80%;
+        min-width: 250px;
+        height: 400px;
+    }
+
+    form {
+        justify-content: space-between;
+    }
+
+    input {
+        width: 70px;
+    }
+}
